@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+	<div style="background:black;z-index:1000;width:100%;height:100%;font-family:none;position:fixed;top:0;left:0;display:block;line-height:100vh;font-size:50;color:white;text-align:center" class=Load id=Load></div>
+	<div>
+		<!--video loop=loop id="bg" style="z-index:-1;filter:brightness(60%);position:fixed;top:0;left:0;width:100%" autoplay=autoplay src=http://10.20.37.103/program/steam/steamapps/workshop/content/431960/1476454600/miku初音动态壁纸.mp4></video-->
+		<iframe id="bg" style="z-index:-1;filter:brightness(60%);position:fixed;top:0;left:0;width:100%;height:100%" src=http://10.20.37.103/program/steam/steamapps/workshop/content/431960/845587216></iframe>
+	</div>
+
+	<div style="z-index:10;top:0;width:100%;display:block;position:fixed;">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">
+					<div class="hub">
+						<span>Sxz</span>
+						<span>Nav</span>
+					</div>
+				</a>
+				<div class="collapse navbar-collapse" id="navbarColor02">
+					<ul class="navbar-nav me-auto nav">
+						<li class="nav-item">
+							<a class="nav-link active" href="#home" data-bs-toggle="tab">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-bs-toggle="tab" href="#TEST">Special</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="https://github.com"><img src=https://unpkg.com/simple-icons@v7/icons/github.svg>Github</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="https://bootswatch.com">Bootswatch
+								CSS</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" onclick="theme.href=theme.href.replace('darkly','flatly')">Change
+								Theme</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false">Project
+								SXZ</a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="http://10.20.37.103">File
+									Server</a>
+								<a class="dropdown-item" href="http://10.20.37.103:5901/vnc.html">Remote
+									Controller</a>
+								<a class="dropdown-item" href="#">Live
+									Stream(Not
+									Available)</a>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" role="button" aria-haspopup="true" aria-expanded="false">Tool</a>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="http://beautifier.io">Beautifier</a>
+								<a class="dropdown-item" href="http://soukaapp.com">Souka</a>
+								<a class="dropdown-item" href="http://coolaf.com/tool/post">Online
+									XHR</a>
+							</div>
+						</li>
+					</ul>
+					<form class="d-flex" action="http://www5.baidu.com/s" method=get id=searcher>
+						<div class="input-group">
+							<div class=dropdown><span id=searchE class="input-group-text dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">百度</span>
+								<div class="dropdown-menu"><a class="dropdown-item" data-url="http://www5.baidu.com/s" data-var="wd" data-text="百度一下(快照真好用)"><img src=https://unpkg.com/simple-icons@v7/icons/baidu.svg>百度</a><a class="dropdown-item" data-url="http://sogo.com/web" data-var="query" data-text="搜个寄吧"><img src=https://unpkg.com/simple-icons@v7/icons/sogou.svg>搜狗</a><a class="dropdown-item" data-url="https://bing.com" data-var="q" data-text="无广告，百度能学学?"><img src=https://unpkg.com/simple-icons@v7/icons/microsoftbing.svg>必应</a></div>
+							</div>
+							<input class="form-control me-sm-2" type="text" placeholder="百度一下" name=wd id=searchKeys><button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+						</div>
+
+				</div>
+				</form>
+
+			</div>
+	</div>
+	</nav>
+	</div>
+
+	<div id="myTabContent" class="tab-content" style="padding:50px;margin-top:40px">
+		<div class="tab-pane fade active show" id="home">
+
+			<h3>Main Page</h3>
+
+			<div style="position:absolute;right:0;top:75px">
+				<div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+					<div class="toast-header">
+						<strong class="me-auto">萝莉控的Kuzu说</strong>
+						<small>HELLO!</small>
+						<button type="button" class="btn-close ms-2 mb-1">
+							<span aria-hidden="true"></span>
+						</button>
+					</div>
+					<div class="toast-body">
+						Hello, nice to fuck
+						you! But Chokora大好き～
+					</div>
+				</div>
+				<div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+					<div class="toast-header">
+						<strong class="me-auto">萝莉控的Kuzu说</strong>
+						<small>おは!</small>
+						<button type="button" class="btn-close ms-2 mb-1">
+							<span aria-hidden="true"></span>
+						</button>
+					</div>
+					<div class="toast-body">
+						SXZ IDE \ SXZ EpubReader \ SXZ Player 谁帮帮我开发。嘤嘤嘤
+					</div>
+				</div>
+         <div class="border-light toast show" role="alert" aria-live="assertive" aria-atomic="true">
+					<div class="toast-header">
+						<strong class="me-auto">El Psy Kongroo</strong>
+						<small>トゥットゥルー !</small>
+						<button type="button" class="btn-close ms-2 mb-1">
+							<span aria-hidden="true"></span>
+						</button>
+					</div>
+					<pre class="toast-body">
+宇宙に始まりはあるが、終わりはない。　---無限
+星にもまた始まりはあるが、自らの力をもって滅び逝く。　---有限
+英知を持つ者こそ、最も愚かであること。歴史からも読み取れる。
+海に生ける魚は、陸の世界を知らない。彼らが英知を持てば、それもまた滅び逝く。
+人間が光の速さを超えるのは、魚たちが陸で生活を始めるよりも滑稽。
+これは抗える者たちに対する、神からの最後通告とも言えよう。
+					</pre>
+				</div>
+  		</div>
+			<div class="card-body">
+				<h5 class="card-title">
+					LINKS</h5>
+
+				<ul class="list-group list-group-flush">
+					<li><a href="https://cnblogs.com/luoyj506" class="card-link">LYJ
+							BLOG</a><a href="https://kuzusy.github.io" class="card-link">ZWP
+							BLOG</a>
+					</li>
+					<li><a href="http://lightnovel.us" class="card-link">轻之国度</a><a href="http://ysjdm.net" class="card-link">异世界动漫</a>
+					</li>
+					<li><a href="https://mmgal.com/music" class="card-link">音乐阁</a><a href="https://netease-music.fe-mm.com" class="card-link">音乐阁2</a>
+					</li>
+					<li><a href=https://moegirl.org class="card-link">萌百</a><a class="card-link" href=https://www.songshuxy.com />靴下小屋</a>
+					</li>
+					<li><a class="card-link" href=http://www.luogu.com.cn>Luogu</a><a class="card-link" href=http://swarmsim.com>SwarmSim</a><a class="card-link" href=https://github.com/KuzuSy/webCrawler>爬</a>
+					</li>
+					<li><a class="card-link" href=http://pixivic.com>PIXIVIC</a><a class="card-link" href=http://pixiv.moe>Pixiv.moe</a>
+					</li>
+
+				</ul>
+			</div>
+
+	 </div>
+
+		<div class="tab-pane fade" id="TEST">
+			<textarea class="form-control" rows=3 style="width: 724px; height: 377px;" id="t" onchange='let script = document.createElement("script");script.innerHTML=this.value;m.innerHTML="";m.appendChild(script);'></textarea>
+			<div id="m"></div>
+
+			<input class="btn btn-primary" type=button onclick="manga.innerHTML+=makeString('<img src=\''+path.value,'.jpg\'>',Number(start.value),Number(count.value),3)" value=全加载><br>
+			<input class="btn btn-primary" type=button onclick="manga.innerHTML=makeString('<img class=unload  data-src=\''+path.value,'.jpg\'>',Number(start.value),Number(count.value),3);imgs=document.getElementsByTagName('img');lazyLoad()" value=懒加载(荐)><br>
+			<input type=text class="form-control" id=path value=''>
+			<input type=text class="form-control" id=start value=0>
+			<input type=text class="form-control" id=count value=200>
+			<div id=manga></div>
+		</div>
+	</div>
+	<style>pre{word-wrap:break-word;white-space:pre-wrap}
+		li {
+			list-style: none
+		}
+
+		a img {
+			width: 16px;
+			margin-right: 5px;
+			filter: invert(1)
+		}
+
+		.card-link {
+			font-weight: bold;
+			color: #afceff !important;
+			width: 100px;
+			display: inline-block
+		}
+
+		.hub {
+			font-family: sans-serif;
+			font-weight: bold;
+		}
+
+		.hub span:nth-child(2) {
+			background: #FF9900;
+			color: #000000;
+			border-radius: 1vw;
+			padding: 0% 7%;
+			display: inline-block;
+		}
+
+		#manga img {
+			width: 60%;
+			display: block;
+			margin: 0 20%;
+		}
+	</style>
+	<script>
+		var p = t = 0,w=" Nice To Fuuuuck You"
+			ll = setInterval(() =>{Load.innerText = `${t++}`;if(p>=2)loadover()}, 20);
+		$("body").append(`<link id=theme rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.1.3/darkly/bootstrap.min.css">`)
+		var js1 = document.createElement("script");
+		js1.src = "https://cdn.staticfile.org/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js";
+		$("body").append(js1)
+		theme.onload = () =>p++;
+		bg.onload = () =>p++;
+
+    function rdString(n){var res="";while(n--)res+=String.fromCharCode(Math.round(Math.random()*7000+5));return res}
+		function loadover() {
+			setTimeout(() => {
+				$(".Load").slideUp(500).then(clearInterval(ll))
+			}, 1000)
+		}
+	</script>
+
+	<script>
+		$("form .dropdown-item").click(function() {
+			$(searchE).text($(this).text()),
+				searcher.action = $(this).data("url"),
+				searchKeys.placeholder = $(this).data("text"),
+				searchKeys.name = $(this).data("var")
+		})
+		//搜索引擎点击切换事件
+
+		$(".dropdown-toggle").on("click",
+			function(e) {
+				var menu = $(this).next();
+				$(".dropdown-menu").not(
+					menu).slideUp();
+				menu.slideToggle(200);
+				$(document).one("click",
+					function() {
+						menu.slideUp(
+							200);
+					});
+				e.stopPropagation();
+			});
+		$(".dropdown-menu").on("click",
+			function(e) {
+				e.stopPropagation();
+			});
+		$(".btn-close").click(function(e) {
+			$(this).parent().parent().fadeOut()
+		})
+		//下拉菜单动画+实现
+
+		var i = 4,
+			imgs = [];
+		makeString = (prefix, suffix, st, len,
+			idLen, ignore, special) => {
+			if (ignore == undefined)
+				ignore = [];
+			var s = "";
+			for (var i = st, j = 0; i <
+				st + 1 + len; ++i)
+				if (ignore[j] == i) j++;
+				else s += prefix + fixLen(
+					i, idLen) + suffix;
+			return s
+		}
+		fixLen = (x, n) => {
+			x = "" + x;
+			while (x.length < n) x = "0" +
+				x;
+			return x;
+		}
+		inView = x => x
+			.getBoundingClientRect().top <=
+			window.innerHeight
+		load = x => {
+			x.className = "loaded", x
+				.src = x.dataset.src
+		}
+		lazyLoad = () => {
+			for (var i in imgs)
+				if (inView(imgs[i])) load(
+					imgs[i]);
+		}
+		window.onscroll = function() {
+			lazyLoad()
+		}
+	</script>
+</body>
+
+</html>
