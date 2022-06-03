@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Welcome to SXZ++
 
 You can use the [editor on GitHub](https://github.com/KuzuSy/SXZ-plus-plus/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
