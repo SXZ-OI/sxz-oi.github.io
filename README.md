@@ -4,8 +4,8 @@
 
 ### Sxz Nav
 
-- [SxzNav by KuzuSy](https://kuzusy.github.io/SXZ-plus-plus/Nav/)
-- [SxzNav by litluo](https://kuzusy.github.io/SXZ-plus-plus/litluo/)
+- [SxzNav by KuzuSy](/Nav/)
+- [SxzNav by litluo](/litluo/)
 
 ### Future Project
 
