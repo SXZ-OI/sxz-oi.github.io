@@ -2,6 +2,11 @@
 
 本开源项目旨在让被迫留校的锡监学子能有应该更加快乐的平板使用体验，同时帮助中育科教寻找并修复BUG
 
+### Sxz Nav
+
+- [SxzNav by KuzuSy](https://kuzusy.github.io/SXZ-plus-plus/Nav/)
+- [SxzNav by litluo](https://kuzusy.github.io/SXZ-plus-plus/litluo/)
+
 ### Future Project
 
 - SXZ IDE
