@@ -1,6 +1,7 @@
 ## Welcome to SXZ++ V1.0.0
 
 本开源项目旨在让被迫留校的锡监学子能有应该更加快乐的平板使用体验，同时帮助中育科教寻找并修复BUG
+[View on Github](https://github.com/sxz-oi/sxz-oi.github.io/)
 
 ### Sxz Nav
 
