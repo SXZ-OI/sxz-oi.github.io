@@ -4,7 +4,7 @@
 
 ### Sxz Nav
 
-- [SxzNav by KuzuSy](/Nav/)
+- [SxzNav by LoliconMe](/Nav/)
 - [SxzNav by litluo](/litluo/)
 
 ### Future Project
@@ -19,7 +19,7 @@
 #### V1.0.0 2022.06.04
 
 - 启动此项目
-- 上传KuzuSy和litluo的SxzNav
+- 上传LoliconMe和litluo的SxzNav
 
 
 
