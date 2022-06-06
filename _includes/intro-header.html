@@ -7,10 +7,7 @@
 <style type="text/css">
     header.intro-header{
         position: relative;
-        background-image: linear-gradient(
-            rgba(34, 34, 34, 0.6),
-            rgba(34, 34, 34, 0.6)
-          ),url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}');
+        background-image: url('{% if page.link-header %}{{ page.link-header }}{% else %}{ {{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %} }{% endif %}');
         background: {{ page.header-bg-css }};
     }
 
@@ -94,8 +91,26 @@
 {% endif %}
 
 {% if include.type == 'page' %}
-<header class="intro-header" style="background-image: linear-gradient(rgba(34, 34, 34, 0.6),rgba(34, 34, 34, 0.6)),url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
-  <div class="container">
+<style type="text/css">
+    header.intro-header{
+        position: relative;
+        background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}');
+        background: {{ page.header-bg-css }};
+    }
+
+    {% if page.header-mask %}
+    header.intro-header .header-mask{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgba(0,0,0, {{ page.header-mask }});
+    }
+    {% endif %}
+</style>
+
+<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+    <div class="header-mask"></div>
+    <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         {% if include.short %}
