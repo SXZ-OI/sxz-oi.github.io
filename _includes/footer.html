@@ -22,25 +22,11 @@
 <!-- jQuery -->
 <script src="{{ "/js/jquery.min.js " | prepend: site.baseurl }}"></script>
 
+<!--Img LazyLoad-->
+<script src="{{ "/js/lazyload.js " | prepend: site.baseurl }}"></script>
+
 <!--FancyBox-->
 <script src="{{ "/js/fancybox.js " | prepend: site.baseurl }}"></script>
-<script type="text/javascript" src="https://cdnjs.rsb.net/ajax/libs/fancybox/3.5.6/jquery.fancybox.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function() {
-        $(".fancybox").fancybox({
-            padding: 15,
-            infobar : true,
-            toolbar : true,
-            buttons : [
-                'slideShow',
-                'fullScreen',
-                'download',
-                'zoom',
-                'close'
-            ],
-        });
-    });
-</script>
 
 <!-- Bootstrap Core JavaScript -->
 <!-- Currently, only navbar scroll-down effect at desktop still depends on this -->
