@@ -204,7 +204,7 @@
 	</style>
 	<script>
 		var p = t = 0,w=" Nice To Fuuuuck You"
-			ll = setInterval(() =>{Load.innerText = `${t++}`;if(p>=2)loadover()}, 20);
+			ll = setInterval(() =>{Load.innerText = `${t++}`;if(p>=2||t>150)loadover()}, 20);
 		$("body").append(`<link id=theme rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.1.3/darkly/bootstrap.min.css">`)
 		var js1 = document.createElement("script");
 		js1.src = "https://cdn.staticfile.org/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js";
