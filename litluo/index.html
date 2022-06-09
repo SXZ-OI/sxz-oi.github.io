@@ -10,8 +10,8 @@
 </head>
 
 <body>
-    <img loop=loop id="bg" style="z-index:-1;filter:brightness(60%);position:fixed;top:0;left:0;width:100%" autoplay=autoplay src=http://friday-note.oss-cn-hangzhou.aliyuncs.com/cloudnote/notes/sxz/23777/test.jpg>
-
+    <div id="bg" style="z-index:-1;filter:brightness(60%);position:fixed;top:0;left:0;width:100%;height:100%;background: center url(http://friday-note.oss-cn-hangzhou.aliyuncs.com/cloudnote/notes/sxz/23777/test.jpg);background-size:cover"></div>
+    
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
@@ -25,15 +25,14 @@
             <div class="collapse navbar-collapse" id="navbarColor02">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Home <span class="visually-hidden">(current)</span> </a>
+                        <a class="nav-link active" href="#"> Home <span class="visually-hidden">(current)</span> </a>
+                    </li>
+                    <li class="nav-item">
+                        <a target="_blank" class="nav-link" href="https://sxz-oi.github.io/"> SXZ++ <span class="visually-hidden">(current)</span> </a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Wiki</a>
                         <div class="dropdown-menu">
-                            <a target="_blank" class="dropdown-item" href="https://www5.baidu.com">百度百科</a>
-                            <a target="_blank" class="dropdown-item" href="http://sogo.com">搜狗</a>
-                            <a target="_blank" class="dropdown-item" href="http://bing.com">Bing</a>
-                            <div class="dropdown-divider"></div>
                             <a target="_blank" class="dropdown-item" href="https://moegirl.org">萌娘百科</a>
                             <div class="dropdown-divider"></div>
                             <a target="_blank" class="dropdown-item" href="https://www.zhihu.com/">知乎</a>
@@ -45,9 +44,6 @@
                             <a target="_blank" class="dropdown-item" href="http://www.luogu.com.cn">洛谷</a>
                             <a target="_blank" class="dropdown-item" href="https://www.w3cschool.cn/">编程狮</a>
                             <a target="_blank" class="dropdown-item" href="https://github.com">Github</a>
-                            <div class="dropdown-divider"></div>
-                            <a target="_blank" class="dropdown-item" href="https://cnblogs.com/luoyj506">LYJ's Blog</a>
-                            <a target="_blank" class="dropdown-item" href="https://kuzusy.github.io">ZWP's Blog</a>
                             <div class="dropdown-divider"></div>
                             <a target="_blank" class="dropdown-item" href="https://www.bootcss.com">Bootstrap</a>
                             <a target="_blank" class="dropdown-item" href="https://bootswatch.com">Bootswatch</a>
@@ -61,16 +57,6 @@
                             <div class="dropdown-divider"></div>
                             <a target="_blank" class="dropdown-item" href="https://www.g8hh.com/">锅巴汉化</a>
                             <a target="_blank" class="dropdown-item" href="https://yx.g8hh.com/swarmsim/">锅巴虫虫</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Project SXZ</a>
-                        <div class="dropdown-menu">
-                            <a target="_blank" class="dropdown-item" href="http://10.20.37.103">资源站</a>
-                            <a target="_blank" class="dropdown-item" href="http://10.20.37.103:5901/vnc.html">云电脑</a>
-                            <a target="_blank" class="dropdown-item" href="http://10.10.28.10">直播间</a>
-                            <div class="dropdown-divider"></div>
-                            <a target="_blank" class="dropdown-item" href="https://sxz-oi.github.io/">SXZ++</a>
                         </div>
                     </li>
                 </ul>
@@ -97,17 +83,20 @@
     <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true" style="position:absolute;right:0">
         <div class="toast-header">
             <strong class="me-auto">不会写HTML的litluo说：</strong>
-            <small>V1.0.1-1</small>
+            <small>V1.0.2</small>
             <button type="button" class="btn-close ms-2 mb-1" data-bs-dismiss="toast" aria-label="Close">
                 <span aria-hidden="true"></span>
             </button>
         </div>
-        <div class="toast-body">Welcome to SxzNav by litluo</div>
+        <div class="toast-body">Welcome to SxzNav by LitLuo</div>
     </div>
 
     <ul class="nav nav-tabs">
         <li class="nav-item">
             <a class="nav-link active" data-bs-toggle="tab" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#sxz">SXZ++</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" data-bs-toggle="tab" href="#links">Links</a>
@@ -130,97 +119,165 @@
         <div class="tab-pane fade active show" id="home">
             <p class="text-secondary">你们如果有什么有趣的点子可以找我来加到我的主页，现在这个Home Page还是空的呢</p>
         </div>
+        <div class="tab-pane fade" id="sxz">
+            <div class="container">
+                <h2 class="text-secondary">
+                    SXZ Projects
+                </h2>
+                <div class="row gx-5">
+                    <div class="col">
+                        <div class="list-group">
+                            <a target="_blank" href="https://cnblogs.com/luoyj506" class="list-group-item list-group-item-action flex-column align-items-start active" style="background:rgba(120, 194, 173, 0.6) !important;">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">SXZ Projects</h5>
+                                    <small>by LitLuo</small>
+                                </div>
+                                <p class="mb-1">
+                                    This link is to <strong>LitLuo's Blog</strong>
+                                    <br>
+                                    The following links are SXZ Projects made by <strong>LitLuo</strong>
+                                </p>
+                            </a>
+                            <a target="_blank" href="http://10.20.37.111" class="list-group-item list-group-item-action" style="background:rgba(255,255,255,0.8) !important;">
+                                File Server
+                            </a>
+                            <a target="_blank" href="http://10.20.37.111:5901/vnc.html" class="list-group-item list-group-item-action" style="background:rgba(255,255,255,0.8) !important;">
+                                Remote Controller
+                            </a>
+                            <a target="_blank" href="https://sxz-oi.github.io/litluo/" class="list-group-item list-group-item-action" style="background:rgba(255,255,255,0.8) !important;">
+                                SxzNav-Github
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="list-group">
+                            <a target="_blank" href="https://kuzusy.github.io" class="list-group-item list-group-item-action flex-column align-items-start active" style="background:rgba(120, 194, 173, 0.6) !important;">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1">SXZ Projects</h5>
+                                    <small>by LoliconMe</small>
+                                </div>
+                                <p class="mb-1">
+                                    This link is to <strong>LoliconMe's Blog</strong>
+                                    <br>
+                                    The following links are SXZ Projects made by <strong>LoliconMe</strong>
+                                </p>
+                            </a>
+                            <a target="_blank" href="http://10.20.37.103" class="list-group-item list-group-item-action" style="background:rgba(255,255,255,0.8) !important;">
+                                File Server
+                            </a>
+                            <a target="_blank" href="http://10.20.37.103:5901/vnc.html" class="list-group-item list-group-item-action" style="background:rgba(255,255,255,0.8) !important;">
+                                Remote Controller
+                            </a>
+                            <a target="_blank" href="https://sxz-oi.github.io/Nav/" class="list-group-item list-group-item-action" style="background:rgba(255,255,255,0.8) !important;">
+                                SxzNav-Github
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="text-secondary">
+                    Others
+                </h2>
+                <a target="_blank" class="btn btn-primary" href="http://10.10.28.10" role="button" style="background:rgba(120, 194, 173, 0.6) !important;">Live Stream</a>
+            </div>
+        </div>
         <div class="tab-pane fade" id="links">
-            <ul class="list-group list-group-flush">
-                <ul class="text-secondary">
-                <li>
-                    <a class="text-secondary" target="_blank" href="http://lightnovel.us">LN</a>
-                    <a class="text-secondary" target="_blank" href="http://ysjdm.net">TSDM</a>
-                    <a class="text-secondary" target="_blank" href="https://moegirl.org">萌百</a>
-                    <a class="text-secondary" target="_blank" href="https://www.songshuxy.com/">靴下小屋</a>
-                </li>
-                <li>
-                    <a class="text-secondary" target="_blank" href="https://cnblogs.com/luoyj506">LYJ's Blog</a>
-                    <a class="text-secondary" target="_blank" href="https://kuzusy.github.io">ZWP's Blog</a>
-                </li>
-                <li>
-                    <a class="text-secondary" target="_blank" href="http://10.20.37.103">资源站</a>
-                    <a class="text-secondary" target="_blank" href="http://10.20.37.103:5901">云电脑</a> 
-                    <a class="text-secondary" target="_blank" href="http://10.10.28.10">直播</a>
-                </li>
-                <li>
-                    <a class="text-secondary" target="_blank" href="https://mmgal.com/music">音乐阁</a>
-                    <a class="text-secondary" target="_blank" href="https://netease-music.fe-mm.com">音乐阁2</a>
-                    <a class="text-secondary" target="_blank" href="https://yx.g8hh.com/swarmsim/">虫虫</a>
-                </li>
-                <li>
-                    <a class="text-secondary" target="_blank" href="http://www.luogu.com.cn">Luogu</a>
-                    <a class="text-secondary" target="_blank" href="https://www.w3cschool.cn/">W3</a>
-                    <a class="text-secondary" target="_blank" href="https://github.com">Github</a>
-                    <a class="text-secondary" target="_blank" href="https://github.com/SXZ-OI/sxz-oi.github.io.git">SXZ</a>
-                    <a class="text-secondary" target="_blank" href="https://www.bootcss.com/">bootstrap</a>
-                </li>
-                <li>
-                    <p> 666 </p>
-                    <!-- <a class="text-secondary" target="_blank" href=""></a> -->
-                </li>
+            <div class="container">
+                <ul class="list-group list-group-flush">
+                    <ul class="text-secondary">
+                        <li>
+                            <a class="link-secondary" target="_blank" href="http://lightnovel.us">LN</a>
+                            <a class="link-secondary" target="_blank" href="http://ysjdm.net">TSDM</a>
+                            <a class="link-secondary" target="_blank" href="https://moegirl.org">萌百</a>
+                            <a class="link-secondary" target="_blank" href="https://www.songshuxy.com/">靴下小屋</a>
+                        </li>
+                        <li>
+                            <a class="link-secondary" target="_blank" href="https://cnblogs.com/luoyj506">LYJ's Blog</a>
+                            <a class="link-secondary" target="_blank" href="https://kuzusy.github.io">ZWP's Blog</a>
+                        </li>
+                        <li>
+                            <a class="link-secondary" target="_blank" href="http://10.20.37.103">资源站</a>
+                            <a class="link-secondary" target="_blank" href="http://10.20.37.103:5901">云电脑</a> 
+                            <a class="link-secondary" target="_blank" href="http://10.10.28.10">直播</a>
+                        </li>
+                        <li>
+                            <a class="link-secondary" target="_blank" href="https://mmgal.com/music">音乐阁</a>
+                            <a class="link-secondary" target="_blank" href="https://netease-music.fe-mm.com">音乐阁2</a>
+                            <a class="link-secondary" target="_blank" href="https://yx.g8hh.com/swarmsim/">虫虫</a>
+                        </li>
+                        <li>
+                            <a class="link-secondary" target="_blank" href="http://www.luogu.com.cn">Luogu</a>
+                            <a class="link-secondary" target="_blank" href="https://www.w3cschool.cn/">W3</a>
+                            <a class="link-secondary" target="_blank" href="https://github.com">Github</a>
+                            <a class="link-secondary" target="_blank" href="https://github.com/SXZ-OI/sxz-oi.github.io.git">SXZ</a>
+                            <a class="link-secondary" target="_blank" href="https://www.bootcss.com/">bootstrap</a>
+                        </li>
+                        <li>
+                            <p> 666 </p>
+                            <!-- <a class="link-secondary" target="_blank" href=""></a> -->
+                        </li>
+                    </ul>
                 </ul>
-            </ul>
+            </div>
         </div>
         <div class="tab-pane fade" id="Update">
-            <div class="progress">
-                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 21%;"></div> 
+            <div class="container">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 21%;"></div> 
+                </div>
+                <h1 class="text-secondary">Update Log</h1>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> Version 1.0.X </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body text-muted">
+                                <h3 class="text-primary">V1.0.2 <small>2022.06.09</small></h3>
+                                <ul>
+                                    <li>背景图片</li>
+                                    <li>修改SXZ Project</li>
+                                    <li>CSS微调</li>
+                                </ul>
+                                <h3 class="text-primary">V1.0.1-1 <small>2022.06.04</small></h3>
+                                <ul>
+                                    <li>Nav栏跟随页面移动</li>
+                                    <li>修改Link栏内容</li>
+                                </ul>
+                                <h3 class="text-primary">V1.0.1 <small>2022.06.03</small></h3>
+                                <ul>
+                                    <li>新支持搜索引擎切换</li>
+                                    <li>新建Update Log切换卡</li>
+                                </ul>
+                                <h3 class="text-primary">V1.0.0 <small>2022.06.01</small></h3>
+                                <ul>
+                                    <li>开始编写html之旅</li>
+                                    <li>完成SxzNav基本架构</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" disabled> Disabled </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <!-- text -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" disabled> Disabled </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <!-- text -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <h1 class="text-secondary">Update Log</h1>
-            <div class="accordion" id="accordionExample" style="opacity:0.8">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> Version 1.0.X </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                        <div class="accordion-body text-secondary">
-                            <h3>V1.0.1-1 <small>2022.06.04</small></h3>
-                            <ul>
-                                <li>Nav栏跟随页面移动</li>
-                                <li>修改Link栏内容</li>
-                            </ul>
-                            <h3>V1.0.1 <small>2022.06.03</small></h3>
-                            <ul>
-                                <li>新支持搜索引擎切换</li>
-                                <li>新建Update Log切换卡</li>
-                            </ul>
-                            <h3>V1.0.0 <small>2022.06.01</small></h3>
-                            <ul>
-                                <li>开始编写html之旅</li>
-                                <li>完成SxzNav基本架构</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" disabled> Disabled </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <!-- text -->
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" disabled> Disabled </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <!-- text -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="tab-pane fade" id="dropdown1">
-            <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.</p>
         </div>
         <div class="tab-pane fade" id="dropdown2">
             <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater.</p>
@@ -233,6 +290,8 @@
 
     <style> 
     .hub { font-family: sans-serif; font-weight: bold; } .hub span:nth-child(2) { background: #FF9900; color: #000000; border-radius: 1vw; padding: 3% 7%; display: inline-block; } #manga img { width: 60%; display: block; margin: 0 20%; } 
+    .accordion-item{background:rgba(255,255,255,0.8) !important;}
+    .accordion-button{background: rgba(255,255,255,0) !important;}
     </style>
 
 </body> 
