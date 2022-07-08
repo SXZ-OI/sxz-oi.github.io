@@ -38,9 +38,17 @@ github上由于不会用git，所以没有 `node_modules`
 
 版本为 $V16.16.0$
 
-各种系统都有
+各种系统都有($Win \times 64, Win \times 32, IOS \times 64, Linux \times 64$)
 
-完成配置后双击 `start.bat` 即可运行
+完成配置后
+
+`Windows` 双击 `start.bat` 即可运行
+
+`IOS` 与 `Linux` 在该文件夹的命令行内输入以下命令后即可开启
+
+```cmd
+node index.js
+```
 
 默认端口为 $3939$ ，可在bat中调整
 
@@ -53,3 +61,5 @@ github上由于不会用git，所以没有 `node_modules`
 # 说明
 
 本次项目全程由 LitLuo 与 LoLiconMe 完成
+
+欢迎新人加入
