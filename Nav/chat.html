@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <link rel=stylesheet href=https://ezy-sxz.oss-cn-hangzhou.aliyuncs.com/APlayer.min.css>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: grey url('http://ezy-sxz.oss-cn-hangzhou.aliyuncs.com/Illust/1.jpg');
+            background-size: cover;
+            background-position: center;
+            width: 100vw;
+            height: 100vh;
+        }
+        
+        #loginUI input {
+            outline: 0;
+            margin: 0;
+            padding: 5px
+        }
+        
+        #loginN {
+            border-radius: 10px 0 0 10px
+        }
+        
+        #login {
+            border-radius: 0 10px 10px 0;
+            background: #abf;
+            border: #abf solid;
+            transition: 0.2s
+        }
+        
+        #login:hover {
+            box-shadow: 0px 0px 1px 1px lightblue
+        }
+        
+        #login:focus {
+            color: white
+        }
+        
+        #loginUI {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #ico {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: white 10px double;
+            margin-bottom: 5%;
+            animation: shine 2s infinite
+        }
+        
+        #ico::after {
+            content: 'Dollars-SXZ';
+            color: white;
+            line-height: 300px;
+            font-size: 25px
+        }
+        
+        #loginUI {
+            background: black;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            left: 0;
+            bottom: 0
+        }
+        
+        @keyframes shine {
+            0% {
+                box-shadow: 0 0 3px 3px gold
+            }
+            40% {
+                box-shadow: 0 0 3px 3px aqua
+            }
+            to {
+                box-shadow: 0 0 3px 3px gold
+            }
+        }
+        
+        @keyframes fadeout {
+            to {
+                opacity: 0;
+                transform: scale(1.3)
+            }
+        }
+        
+        @keyframes scalein {
+            0% {
+                transform: scale(0)
+            }
+            to {
+                transform: scale(1)
+            }
+        }
+        
+        @keyframes scaleout {
+            0% {
+                transform: scale(1)
+            }
+            to {
+                transform: scale(0)
+            }
+        }
+        
+        .reply-item input {
+            -webkit-box-sizing: border-box;
+            color: white;
+            outline: 0;
+            font-size: 25px;
+            transition: 0.3s;
+            height: 60px;
+            float: left;
+            line-height: 30px
+        }
+        
+        .reply-item {
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0
+        }
+        
+        .reply-send {
+            transition: 0.15s;
+            width: 15%;
+            background: #456;
+            border: none
+        }
+        
+        .reply-send:active {
+            background: #888
+        }
+        
+        #reply {
+            background: rgba(0, 0, 0, 0.5);
+            padding-left: 15px;
+            width: 85%;
+            border: 1px green solid;
+        }
+        
+        #reply:focus {
+            border-color: aqua
+        }
+        
+        .reply-item textarea {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            width: 100%;
+            height: 50px;
+            font-size: 30px;
+        }
+        
+        #main {
+            z-index: 10;
+            margin: 0 3%;
+            max-height: 100vh;
+            width: 94%;
+            overflow: scroll
+        }
+        
+        .msg-item:last-child {
+            margin-bottom: 100px
+        }
+        
+        .msg-item {
+            margin: 30px 0;
+            animation: scalein 0.3s
+        }
+        
+        .msg {
+            margin: 1% 0 0 1%;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 20px;
+            max-width: 500px;
+            min-height: 30px;
+            background: lightblue;
+            word-break: break-all;
+            line-height: 30px;
+            display: inline-block
+        }
+        
+        .msg-mine .msg {
+            background: #cfd
+        }
+        
+        .msg-mine {
+            text-align: right
+        }
+        
+        .msg-nick {
+            font-weight: bold;
+            color: white
+        }
+        
+        .msg-del {
+            animation: scaleout .5s forwards
+        }
+        
+        .msg-avatar {
+            display: none;
+            margin: 1% 0 0 1%;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            float: left;
+            background-size: cover;
+            background-position: center
+        }
+        
+        .msg-avatar[name*=a-] {
+            display: block
+        }
+        
+        .msg-avatar[name=a-1] {
+            background-image: url('http://ezy-sxz.oss-cn-hangzhou.aliyuncs.com/AA.png')
+        }
+        
+        .msg-avatar[name=a-2] {
+            background-image: url('http://10.10.28.10:81/D:/ftp/Xueke/y艺术/2021合唱论文/高一七班朱伟鹏合唱论文/2.jpg')
+        }
+        
+        .msg-avatar[name=a-3] {
+            background-image: url('http://10.10.28.10:81/D:/ftp/Xueke/y艺术/2021合唱论文/高一七班朱伟鹏合唱论文/files/head.png')
+        }
+        
+        .msg-avatar[name=a-4] {
+            background-image: url('http://ezy-sxz.oss-cn-hangzhou.aliyuncs.com/Illust/2.png')
+        }
+        
+        .msg-avatar[name=a-5] {
+            background-image: url('http://ezy-sxz.oss-cn-hangzhou.aliyuncs.com/Illust/3.png')
+        }
+        
+        .msg-avatar[name=a-6] {
+            background-image: url('http://ezy-sxz.oss-cn-hangzhou.aliyuncs.com/Illust/1.png')
+        }
+        
+        .msg-mine .msg-avatar {
+            float: right;
+            margin: 1% 1% 0 0
+        }
+        
+        .msg-mine .msg {
+            margin: 1% 1% 0 0;
+            text-align: left
+        }
+        
+        .msg-item img {
+            max-width: 100%
+        }
+        
+        .msg-rmv {
+            transition: 0.3s;
+            transform: scale(0.000001);
+            display: inline-block;
+            margin: 1% 1% 0 0;
+            width: 10px
+        }
+        
+        .msg-item:hover .msg-rmv {
+            transform: scale(1);
+        }
+        
+        .msg-rmv::after {
+            content: "R";
+            color: pink;
+            font-weight: bold;
+            font-size: 15px
+        }
+        
+        #timer {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: white 10px double;
+            margin: 20% auto;
+            animation: shine 2s infinite;
+            color: white;
+            line-height: 300px;
+            font-size: 20px;
+            text-align: center
+        }
+        
+        .bg {
+            z-index: -10;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0
+        }
+        
+        .bg div {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%
+        }
+        
+        .bg .bgMedia {
+            background-size: auto 100vw;
+            background-position: top center;
+            transition: 0.3s;
+            background-image: url('http://ezy-sxz.oss-cn-hangzhou.aliyuncs.com/Illust/6.jpg')
+        }
+        
+        .bg .curtain {
+            background: rgba(0, 0, 0, 0)
+        }
+        
+         ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+</head>
+
+<body>
+    <div class=bg>
+        <div class=bgMedia></div>
+        <div class=curtain></div>
+        <!--b><div id=timer></div></b--></div>
+    <div id=main></div>
+
+    <div class=reply-item><input id=reply placeholder="Type, then Click Button or Press Enter"><input type=button value=SEND id=replySend class=reply-send>
+        <center id=mycard></center>
+    </div>
+
+    <div class=cmd-item id=test2>
+        <div class=cmd-dis id=test></div>
+        <div id=cmd>VERSION:${VERSION}</div>
+    </div>
+    <div id=loginUI>
+        <center>
+            <div id=ico></div><input id=loginN placeholder=LoginName><input type=button id=login value=Login onclick="if(loginN.value)window.nick=loginN.value,init()"></center>
+    </div>
+
+    <script>
+        var admin = 0;
+        Object.defineProperty(window, "nick", {
+            configurable: true,
+            get: function() {
+                return nickvalue
+            },
+            set: function(v) {
+                if (v == "舔舔后藤一里")
+                    v = "你也配";
+                Object.defineProperty(window, "nickvalue", {
+                    configurable: admin,
+                    writable: 0,
+                    value: v
+                })
+            }
+        })
+
+        //window.onerror=(e)=>{log("ERR: "+e)}
+        enableJS = 1, msg = [], deleted = {}, sent = {}, msgNode = {}, T = 20, itv = 0, tick = 0, key = 114514,
+            bgList = ["http://10.10.28.10:81/D:/ftp/Xueke/y艺术/2021合唱论文/高一七班朱伟鹏合唱论文/files/background.png"],
+            aMap = {
+                "舔舔后藤二里:": "a-1",
+                "汪蒸瘟:": "a-2",
+                "选修必高分:": "a-3",
+                "\ud83c\udfc0:": "a-4",
+                "。。。:": "a-4",
+                "舔舔后藤一里:": "a-5",
+                "m:": "a-6",
+                "解几我亲爹:": "a-7",
+                "杀意已决:": "a-8",
+                "litluo:": "a-9",
+                "嘻\ud83d\udc36:": "a-10"
+            }, channel = 3629
+
+        reply.onkeydown = (e) => {
+            if (e.keyCode == 13) replySend.click()
+        }
+
+        replySend.onclick = async() => {
+            if (reply.value == "@AC") allClear();
+            else if (reply.value.match(/^@bg/))
+                document.body.style.backgroundImage = `url('${bgList[Number(reply.value.split(" ")[1])||0]}')`
+            else if (reply.value[0] == "$") try {
+                eval(reply.value.substring(1));
+                return
+            } catch (e) {
+                reply.value = e
+            }
+            else if (reply.value != "") sendMine(nick + ":" + reply.value);
+            else if (reply.value == "" && game.search(nick) != -1)
+                sendMine(nick + ":#" + game.players[game.search(nick)].play())
+            reply.value = "";
+        }
+
+        loginAnime = () => {
+            loginUI.style.animation = "fadeout 1s linear forwards", setTimeout(() => loginUI.remove(), 1050)
+        }
+
+        init = () => {
+                if (window.inited == 1) return
+                    //login
+                client = "web-1e61595168de4d75bb89f3d8c72b02dd",
+                    (x = new XMLHttpRequest).open("POST", `http://yzgz.api.zykj.org/api/TokenAuth/Login`, 1);
+                x.setRequestHeader("Content-Type", "application/json");
+                x.setRequestHeader("ClientCode", client);
+                x.onreadystatechange = () => {
+                    if (x.readyState == 4) {
+                        token = JSON.parse(x.response).result.accessToken;
+
+                        inited = 1
+                        loginAnime()
+                        update();
+                        clearInterval(itv);
+                        itv = setInterval(() => {
+                            if (tick++ >= T) update(tick = 0)
+                        }, 100);
+                    }
+                }
+                x.send(`{"userName":"18877868372","password":"lws868372","clientType":1}`);
+                login.disabled = 1, login.value = "Logining"
+            }
+            //after pressing login button, do some inits(set nickname, set auto refresh interval, set token, start loginAnimation)
+
+
+        log = function(x) {
+            var p = document.createElement("p");
+            p.innerText = x, cmd.prepend(p);
+        }
+
+        var tx, ty, tr = 0,
+            tt = 0,
+            ttx = tty = 0;
+        test.ontouchstart = (e) => {
+            tx = e.touches[0].clientX, ty = e.touches[0].clientY
+        }
+        test.ontouchmove = (e) => {
+            ttx = tr + tx - e.touches[0].clientX, tty = tt - ty + e.touches[0].clientY;
+            if (ttx < 0) ttx = 0;
+            if (ttx > window.innerWidth - test.getBoundingClientRect().width) ttx = window.innerWidth - test.getBoundingClientRect().width
+            if (tty < 0) tty = 0;
+            if (tty > window.innerHeight - test.getBoundingClientRect().height) tty = window.innerHeight - test.getBoundingClientRect().height
+            test2.style.right = ttx, test2.style.top = tty;
+            e.preventDefault()
+        }
+        test.ontouchend = (e) => {
+            tr = ttx, tt = tty
+        }
+
+        fetch("http://ezy-sxz.oss-cn-hangzhou.aliyuncs.com/js/mathjax.js")
+            .then(r => r.text())
+            .then(r => eval(r))
+        fetch("http://ezy-sxz.oss-cn-hangzhou.aliyuncs.com/js/DPlayer.min.js")
+            .then(r => r.text())
+            .then(r => eval(r.replace(/URL/, "window.URL")))
+        fetch("http://friday-note.oss-cn-hangzhou.aliyuncs.com/cloudnote/notes/sxz/22730/1.txt")
+            .then(r => r.arrayBuffer())
+            .then(r => eval((new TextDecoder("GBK")).decode(r)))
+        fetch("http://friday-note.oss-cn-hangzhou.aliyuncs.com/cloudnote/notes/sxz/22730/js/music.js")
+            .then(r => r.arrayBuffer())
+            .then(r => eval((new TextDecoder("GBK")).decode(r)))
+        fetch("http://friday-note.oss-cn-hangzhou.aliyuncs.com/cloudnote/notes/sxz/22730/js/ddz.js")
+            .then(r => r.arrayBuffer())
+            .then(r => eval((new TextDecoder("GBK")).decode(r)))
+        fetch("http://friday-note.oss-cn-hangzhou.aliyuncs.com/cloudnote/notes/sxz/22730/js/ms.js")
+            .then(r => r.arrayBuffer())
+            .then(r => eval((new TextDecoder("GBK")).decode(r)))
+
+
+        loadVideo = async(url) => {
+            sendMine(nick + ":[DPlayer]").then(el => new DPlayer({
+                container: el,
+                video: {
+                    url: url
+                }
+            }))
+        }
+    </script>
+</body>
+
+</html>
