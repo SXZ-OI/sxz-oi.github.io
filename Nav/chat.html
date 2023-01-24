@@ -464,22 +464,22 @@
             tr = ttx, tt = tty
         }
 
-        fetch("http://ezy-sxz.oss-cn-hangzhou.aliyuncs.com/js/mathjax.js")
+        fetch("https://ezy-sxz.oss-cn-hangzhou.aliyuncs.com/js/mathjax.js")
             .then(r => r.text())
             .then(r => eval(r))
-        fetch("http://ezy-sxz.oss-cn-hangzhou.aliyuncs.com/js/DPlayer.min.js")
+        fetch("https://ezy-sxz.oss-cn-hangzhou.aliyuncs.com/js/DPlayer.min.js")
             .then(r => r.text())
             .then(r => eval(r.replace(/URL/, "window.URL")))
-        fetch("http://friday-note.oss-cn-hangzhou.aliyuncs.com/cloudnote/notes/sxz/22730/1.txt")
+        fetch("https://friday-note.oss-cn-hangzhou.aliyuncs.com/cloudnote/notes/sxz/22730/1.txt")
             .then(r => r.arrayBuffer())
             .then(r => eval((new TextDecoder("GBK")).decode(r)))
-        fetch("http://friday-note.oss-cn-hangzhou.aliyuncs.com/cloudnote/notes/sxz/22730/js/music.js")
+        fetch("https://friday-note.oss-cn-hangzhou.aliyuncs.com/cloudnote/notes/sxz/22730/js/music.js")
             .then(r => r.arrayBuffer())
             .then(r => eval((new TextDecoder("GBK")).decode(r)))
-        fetch("http://friday-note.oss-cn-hangzhou.aliyuncs.com/cloudnote/notes/sxz/22730/js/ddz.js")
+        fetch("https://friday-note.oss-cn-hangzhou.aliyuncs.com/cloudnote/notes/sxz/22730/js/ddz.js")
             .then(r => r.arrayBuffer())
             .then(r => eval((new TextDecoder("GBK")).decode(r)))
-        fetch("http://friday-note.oss-cn-hangzhou.aliyuncs.com/cloudnote/notes/sxz/22730/js/ms.js")
+        fetch("https://friday-note.oss-cn-hangzhou.aliyuncs.com/cloudnote/notes/sxz/22730/js/ms.js")
             .then(r => r.arrayBuffer())
             .then(r => eval((new TextDecoder("GBK")).decode(r)))
 
